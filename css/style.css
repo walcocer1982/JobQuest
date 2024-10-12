@@ -1,0 +1,171 @@
+/* Estilos generales */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    padding: 1rem;
+}
+
+header {
+    background-color: #333;
+    color: white;
+    padding: 1.5rem;
+    text-align: center;
+}
+
+header h1 {
+    font-size: 2.5rem;
+    font-weight: 600;
+}
+
+nav ul {
+    list-style: none;
+    margin-top: 1rem;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.main-container {
+    display:flex;
+    flex-wrap:wrap;
+    gap: 5rem;
+    margin-top: 2rem;
+}
+
+/* Formulario de empresa y evento a la izquierda */
+.formulario {
+    width: 30%;
+    background-color: white;
+    padding: 1rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-bottom: 0.8rem;
+}
+
+/* Empresas registradas y eventos guardados a la derecha */
+.empresas-registradas, .eventos-guardados {
+    display: block;
+    width: 65%;
+    background-color: white;
+    padding: 1rem ;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilo de las tablas */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: white;
+    margin-top: 1rem;
+}
+
+th, td {
+    padding: 10px;
+    border: 1px solid #ccc;
+    text-align: left;
+    font-size: 0.85rem; /* Reducido */
+    
+}
+
+th {
+    background-color: #2a4057;
+    color: white;
+    
+}
+
+tbody tr:hover {
+    background-color: #f1f1f1;
+}
+
+/* Botones */
+button {
+    background-color: #116e0f;
+    color: white;
+    padding: 4px 8px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%;
+    
+}
+
+button:hover {
+    background-color: #0056b3;
+    
+}
+
+button.eliminar {
+    background-color: #DC3545;
+    
+}
+
+button.eliminar:hover {
+    background-color: #c82333;
+}
+
+/* Tooltip */
+.tooltip {
+    display: none;
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.8);
+    color: white;
+    padding: 5px;
+    border-radius: 5px;
+    font-size: 12px;
+    z-index: 1000;
+    top: 50px;
+    left: 120px;
+    
+}
+
+.form-field {
+    position: relative;
+    margin-bottom: 1rem;
+}
+
+/* Mostrar el tooltip al pasar el ratón sobre el campo */
+.form-field:hover .tooltip {
+    display: block;
+}
+
+/* Estilos para los campos de entrada */
+input, select, textarea {
+    width: 100%;
+    padding: 6px;
+    margin-top: 5px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 0.7rem; /* Reducido */
+}
+
+/* Map */
+#map, #map-evento {
+    width: 100%;
+    height: 200px;
+    margin-top: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+label {
+    font-size: 0.85rem; /* Reducido */
+}
+.editar, .eliminar {
+    display: flex; /* Usa flexbox para organizar los botones */
+    padding: 5px;
+}

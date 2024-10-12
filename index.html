@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Organizador de Búsqueda de Empleo</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <header>
+        <h1>JOBQUEST</h1>
+        <nav>
+            <ul>
+                <li><a href="home.html">Home</a></li>
+                <li><a href="index.html">Organizador</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="main-container">
+        <!-- Sección de agregar empresa -->
+        <section class="formulario">
+            <h2>Agregar Empresa</h2>
+            <form id="formulario-empresa">
+                <div class="form-field">
+                    <label for="nombre">Nombre de la Empresa:</label>
+                    <input type="text" id="nombre" required>
+                    <span class="tooltip">Ingresa el nombre de la empresa en la que estás interesado.</span>
+                </div>
+                <div class="form-field">
+                    <label for="industria">Industria:</label>
+                    <input type="text" id="industria" required>
+                    <span class="tooltip">Especifica la industria a la que pertenece la empresa.</span>
+                </div>
+                <div class="form-field">
+                    <label for="ubicacion">Ubicación:</label>
+                    <input type="text" id="ubicacion" required>
+                    <span class="tooltip">Indica la ubicación de la empresa.</span>
+                </div>
+                <div class="form-field">
+                    <label for="enlace">Enlace Web de la Empresa:</label>
+                    <input type="url" id="enlace">
+                    <span class="tooltip">Ingresa el enlace al sitio web oficial de la empresa.</span>
+                </div>
+                <div class="form-field">
+                    <label for="oportunidad">Oportunidad de Carrera:</label>
+                    <input type="text" id="oportunidad" required>
+                    <span class="tooltip">Indica la oportunidad de carrera o el puesto que estás buscando.</span>
+                </div>
+                <div class="form-field">
+                    <label for="tamano">Tamaño de la Empresa:</label>
+                    <select id="tamano" required>
+                        <option value="Startup">Startup</option>
+                        <option value="Mediana">Mediana</option>
+                        <option value="Corporación">Corporación</option>
+                    </select>
+                    <span class="tooltip">Especifica el tamaño de la empresa (startup, mediana, corporación).</span>
+                </div>
+                <div class="form-field">
+                    <label for="prioridad">Prioridad:</label>
+                    <select id="prioridad" required>
+                        <option value="Alta">Alta</option>
+                        <option value="Media">Media</option>
+                        <option value="Baja">Baja</option>
+                    </select>
+                    <span class="tooltip">Selecciona la prioridad con la que deseas aplicar a esta empresa.</span>
+                </div>
+                <button type="submit">Agregar Empresa</button>
+            </form>
+        </section>
+
+        <!-- Sección de empresas registradas -->
+        <section class="empresas-registradas">
+            <h2>Empresas Registradas</h2>
+            <table id="tabla-empresas">
+                <thead>
+                    <tr>
+                        <th>Nombre</th>
+                        <th>Industria</th>
+                        <th>Ubicación</th>
+                        <th>Oportunidad de Carrera</th>
+                        <th>Tamaño</th>
+                        <th>Prioridad</th>
+                        <th>Acciones</th>
+                    </tr>
+                </thead>
+                <tbody id="lista-empresas">
+                    <!-- Las empresas se cargarán aquí -->
+                </tbody>
+            </table>
+        </section>
+
+        <!-- Sección de agregar evento -->
+        <section class="formulario" id="agregar-evento">
+            <h2>Agregar Evento</h2>
+            <form id="formulario-evento">
+                <div class="form-field">
+                    <label for="empresa-evento">Selecciona una Empresa:</label>
+                    <select id="empresa-evento" required>
+                        <!-- Opciones de empresas se cargarán dinámicamente -->
+                    </select>
+                </div>
+                <div class="form-field">
+                    <label for="descripcion-evento">Descripción del Evento:</label>
+                    <textarea id="descripcion-evento" required></textarea>
+                </div>
+                <div class="form-field">
+                    <label for="fecha-evento">Fecha del Evento:</label>
+                    <input type="date" id="fecha-evento" required>
+                </div>
+                <div class="form-field">
+                    <label for="hora-evento">Hora del Evento:</label>
+                    <input type="time" id="hora-evento" required>
+                </div>
+                <div class="form-field">
+                    <label for="ubicacion-evento">Ubicación del Evento:</label>
+                    <input type="text" id="ubicacion-evento" required>
+                    <span class="tooltip">Ingresa la ubicación del evento.</span>
+                </div>
+                <button type="submit">Agregar Evento</button>
+            </form>
+        </section>
+
+        <!-- Sección de eventos guardados -->
+        <section class="eventos-guardados">
+            <h2>Eventos Guardados</h2>
+            <table id="tabla-eventos">
+                <thead>
+                    <tr>
+                        <th>Empresa</th>
+                        <th>Descripción del Evento</th>
+                        <th>Fecha</th>
+                        <th>Hora</th>
+                        <th>Ubicación</th>
+                        <th>Acciones</th>
+                    </tr>
+                </thead>
+                <tbody id="lista-eventos">
+                    <!-- Los eventos se cargarán aquí -->
+                </tbody>
+            </table>
+        </section>
+    </div>
+
+    <script src="js/app.js"></script>
+</body>
+
+</html>
