@@ -42,7 +42,7 @@ nav ul li a {
 .main-container {
     display:flex;
     flex-wrap:wrap;
-    gap: 5rem;
+    gap: 4rem;
     margin-top: 2rem;
 }
 
